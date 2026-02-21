@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { ScamMessage, MessageFilter, MessageStats, Classification } from '@/types';
 import { addMessage, getAllMessages, updateMessage, deleteMessage, clearAllMessages } from '@/lib/store';
-import { analyzeText } from '@/lib/gemini';
+import { analyzeText } from '@/lib/minmax';
 
 function generateId(): string {
   return `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
